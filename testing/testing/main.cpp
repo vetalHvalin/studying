@@ -1,3 +1,9 @@
+// Задание:
+// Изучить код, написать коментарии возле каждой непонятной строчки (и разобраться в ней).
+// Проверить баг связаный с повторной игрой (мы вводим мин и макс значения, но оно загадывает другое).
+// Модернизировать. Если вводим число, выпадающее за рамки [мин, макс], то сообщение.
+// После обьявления массива сhar, он скорее всег не очищается. Возможно нужно его удалять из памяти. ***
+
 #include <string.h>
 #include <stdio.h>
 #include <iostream>
@@ -83,24 +89,24 @@ void StartGame(int first_value, int last_value)
 }
 
 void InitGame()
+{
+	char* s = new char[];
+	cin >> s;
+	if (strcmp(s, "Exit") == 0)
 	{
-		char* s = new char[];
-		cin >> s;
-		if (strcmp(s, "Exit") == 0)
-		{
-			return;
-		}
-		else if(strcmp(s, "Run") == 0)
-		{
-			InitMindGame();
-		}
-		else
-		{
-			cout<<"Wrong Command. Try else.\n";
-			cout<<"Enter command:\nRun\nExit\n\n";
-			InitGame();	
-		}
+		return;
 	}
+	else if(strcmp(s, "Run") == 0)
+	{
+		InitMindGame();
+	}
+	else
+	{
+		cout<<"Wrong Command. Try else.\n";
+		cout<<"Enter command:\nRun\nExit\n\n";
+		InitGame();	
+	}
+}
 
 int main()
 {	

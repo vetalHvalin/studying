@@ -2,9 +2,12 @@
 *_debug.exe
 *.deuser
 /*.ilk
-/Debug
-/Release
+/Debug/
+/Release/
 *.user
 *.suo
 *.ncb
 *.ipch
+*.sdf
+*.tlog
+*.idb

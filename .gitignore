@@ -1,0 +1,9 @@
+*.pdb
+*_debug.exe
+*.deuser
+/*.ilk
+/Debug
+/Release
+*.user
+*.suo
+*.ncb

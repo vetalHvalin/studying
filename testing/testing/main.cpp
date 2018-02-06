@@ -1,3 +1,9 @@
+// Задание:
+// Изучить код, написать коментарии возле каждой непонятной строчки (и разобраться в ней).
+// Проверить баг связаный с повторной игрой (мы вводим мин и макс значения, но оно загадывает другое).
+// Модернизировать. Если вводим число, выпадающее за рамки [мин, макс], то сообщение.
+// После обьявления массива сhar, он скорее всег не очищается. Возможно нужно его удалять из памяти. ***
+
 #include <string.h>
 #include <stdio.h>
 #include <iostream>
@@ -38,8 +44,8 @@ int TryFoundNumber(int num)
 	cin>>num;
 	while(cin.fail()) {
 		cout << "It's not a number. Try again\n" << endl;
-		cin.clear();
-		cin.ignore(256,'\n');
+		cin.clear(); //сбрасываем флаг ошибки (инфу, что у нас была ошибка)
+		cin.ignore(256,'\n'); // ігноруємо 256 символів ( табл символів)
 		cin >> num;
 	}
 	return num;
@@ -47,9 +53,9 @@ int TryFoundNumber(int num)
 
 void StartGame(int first_value, int last_value)
 {
-	int random_number = first_value + rand() % last_value;
+	int random_number = first_value + rand() % last_value; //рандомні знач від first_value по last_value
 	cout << "Okay. Try to guess a number\n";
-	int num = random_number-1;
+	int num = random_number-1; //??? напевно для першого порівняння ( до того як коритсувач введе свій варіант
 	while (num != random_number)
 	{
 		num = TryFoundNumber(num);
@@ -63,8 +69,8 @@ void StartGame(int first_value, int last_value)
 		}
 	}
 	cout << "Yes! You win!\nWant play Again?(yes/no)\n";
-	char* str = new char[];
-	cin >> str;
+	//char* str = new char[];//??????????
+	cin >> str;//??????????????????????
 	if (strcmp(str, "yes") == 0)
 	{
 		InitMindGame();
@@ -83,24 +89,24 @@ void StartGame(int first_value, int last_value)
 }
 
 void InitGame()
+{
+	//char* s = new char[];
+	cin >> s;
+	if (strcmp(s, "Exit") == 0)
 	{
-		char* s = new char[];
-		cin >> s;
-		if (strcmp(s, "Exit") == 0)
-		{
-			return;
-		}
-		else if(strcmp(s, "Run") == 0)
-		{
-			InitMindGame();
-		}
-		else
-		{
-			cout<<"Wrong Command. Try else.\n";
-			cout<<"Enter command:\nRun\nExit\n\n";
-			InitGame();	
-		}
+		return;
 	}
+	else if(strcmp(s, "Run") == 0)
+	{
+		InitMindGame();
+	}
+	else
+	{
+		cout<<"Wrong Command. Try else.\n";
+		cout<<"Enter command:\nRun\nExit\n\n";
+		InitGame();	
+	}
+}
 
 int main()
 {	

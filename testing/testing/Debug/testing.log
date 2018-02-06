@@ -1,21 +1,18 @@
-﻿Построение начато 30.01.2018 23:38:05.
-     1>Проект "D:\VS_projects\Studio_10\testing\testing\testing.vcxproj" в узле 2 (целевые объекты build).
+﻿Build started 04.02.2018 12:34:03.
+     1>Project "D:\!Studying\Projects\testing\testing\testing.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
-         Создание "Debug\testing.unsuccessfulbuild", так как было задано "AlwaysCreate".
+         Creating "Debug\testing.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
          main.cpp
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\VS_projects\Studio_10\testing\Debug\testing.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\testing.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:\VS_projects\Studio_10\testing\Debug\testing.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\VS_projects\Studio_10\testing\Debug\testing.lib" /MACHINE:X86 Debug\main.obj
-     1>main.obj : warning LNK4075: не учитывается "/EDITANDCONTINUE" из-за спецификации "/INCREMENTAL:NO"
-         testing.vcxproj -> D:\VS_projects\Studio_10\testing\Debug\testing.exe
-       Manifest:
-         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"D:\VS_projects\Studio_10\testing\Debug\testing.exe;#1" /manifest Debug\testing.exe.intermediate.manifest
-       FinalizeBuildStatus:
-         Файл "Debug\testing.unsuccessfulbuild" удаляется.
-         Обращение к "Debug\testing.lastbuildstate".
-     1>Построение проекта "D:\VS_projects\Studio_10\testing\testing\testing.vcxproj" завершено (целевые объекты build).
+     1>d:\!studying\projects\testing\testing\main.cpp(73): error C2065: 'str' : undeclared identifier
+     1>d:\!studying\projects\testing\testing\main.cpp(74): error C2065: 'str' : undeclared identifier
+     1>d:\!studying\projects\testing\testing\main.cpp(78): error C2065: 'str' : undeclared identifier
+     1>d:\!studying\projects\testing\testing\main.cpp(94): error C2065: 's' : undeclared identifier
+     1>d:\!studying\projects\testing\testing\main.cpp(95): error C2065: 's' : undeclared identifier
+     1>d:\!studying\projects\testing\testing\main.cpp(99): error C2065: 's' : undeclared identifier
+     1>Done Building Project "D:\!Studying\Projects\testing\testing\testing.vcxproj" (build target(s)) -- FAILED.
 
-Построение успешно завершено.
+Build FAILED.
 
-Затраченное время: 00:00:00.98
+Time Elapsed 00:00:01.24

@@ -11,3 +11,5 @@
 /**/*.sdf
 /**/*.tlog
 /**/*.idb
+*.tlog
+/**/**/Debug/*.tlog

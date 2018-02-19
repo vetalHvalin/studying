@@ -69,7 +69,7 @@ void StartGame(int first_value, int last_value)
 		}
 	}
 	cout << "Yes! You win!\nWant play Again?(yes/no)\n";
-	//char* str = new char[];//??????????
+	char* str = new char[];//??????????
 	cin >> str;//??????????????????????
 	if (strcmp(str, "yes") == 0)
 	{
@@ -90,7 +90,7 @@ void StartGame(int first_value, int last_value)
 
 void InitGame()
 {
-	//char* s = new char[];
+	char* s = new char[];
 	cin >> s;
 	if (strcmp(s, "Exit") == 0)
 	{

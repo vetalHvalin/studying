@@ -1,0 +1,15 @@
+/**/*.pdb
+/**/*_debug.exe
+/**/*.deuser
+/**/*.ilk
+/**/Debug/*.tlog
+/**/Release/
+/**/*.user
+/**/*.suo
+/**/*.ncb
+/**/*.ipch
+/**/*.sdf
+/**/*.tlog
+/**/*.idb
+*.tlog
+/**/**/Debug/*.tlog
